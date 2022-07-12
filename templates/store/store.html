@@ -1,0 +1,200 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+	<!-- Hero - Featured Products (tabs)-->
+      <section class="position-relative bg-gradient pt-5 pt-lg-6 pb-7 mb-7">
+        <div class="shape shape-bottom shape-curve bg-body">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
+            <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
+          </svg>
+        </div>
+        <!-- Tabs-->
+        <div class="container pb-7">
+          <div class="row align-items-center pb-7">
+            <div class="col-lg-3">
+              <ul class="nav nav-tabs media-tabs media-tabs-light justify-content-center justify-content-lg-start pb-3 mb-4 pb-lg-0 mb-lg-0" role="tablist">
+                <li class="nav-item me-3 mb-3"><a class="nav-link active" href="#camera" data-bs-toggle="tab" role="tab">
+                    <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" 
+                    	src="{% static 'images/thumbnails/01.jpg' %}" alt="Product" width="60">
+                      <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="fs-sm pe-1">Outdoor HD Cloud Security Camera</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="nav-item me-3 mb-3"><a class="nav-link" href="#sneakers" data-bs-toggle="tab" role="tab">
+                    <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" 
+                    	src="{% static 'images/thumbnails/02.jpg' %}" alt="Product" width="60">
+                      <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="fs-sm pe-1">Running Sneakers Sports Collection</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div></a></li>
+                <li class="nav-item me-3 mb-3"><a class="nav-link" href="#vr" data-bs-toggle="tab" role="tab">
+                    <div class="d-flex align-items-center"><img class="flex-shrink-0 rounded" 
+                    	src="{% static 'images/thumbnails/03.jpg' %}" alt="Product" width="60">
+                      <div class="w-100 ps-2 ms-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="fs-sm pe-1">Wireless Virtual Reality Headset</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                        </div>
+                      </div>
+                    </div></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="camera">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                      <div class="mx-auto" style="max-width: 443px;">
+                      	<img src="{% static 'images/hero/01.png' %}" alt="Security Camera"></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                      <div class="ps-xl-5">
+                        <h2 class="h1 text-light">Outdoor HD Cloud Security Camera</h2>
+                        <p class="fs-lg text-light mb-lg-5">Stay connected 24/7. Free trial for 30 days</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="sneakers">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                      <div class="mx-auto" style="max-width: 443px;">
+                      	<img src="{% static 'images/hero/02.png' %}" alt="Running Sneakers"></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                      <div class="ps-xl-5">
+                        <h2 class="h1 text-light">Running Sneakers Sports Collection</h2>
+                        <p class="fs-lg text-light mb-lg-5">Run like never before. Money back guarantee</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="vr">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 pb-1 mb-4 pb-lg-0 mb-lg-0">
+                      <div class="mx-auto" style="max-width: 443px;">
+                      	<img src="{% static 'images/hero/03.png' %}
+
+                      	" alt="VR Headset"></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                      <div class="ps-xl-5">
+                        <h2 class="h1 text-light">Wireless Virtual Reality Headset</h2>
+                        <p class="fs-lg text-light mb-lg-5">Run like never before. Money back guarantee</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+	<!--
+	<div class="row">
+		{% for product in products %}
+		<div class="col-lg-4 mb-5">
+			<div class="card" >
+			  <img src="{{product.imageURL}}" class="thumbnail">
+			  <div class="card-body">
+			    <h5 class="card-title text-center" style="color: grey;">{{product.category}}</h5>
+			    <h5 class="card-title text-center">{{product.name}}</h5>
+			    <a href="#" data-product={{product.id}} data-action="add" 
+			    class="btn btn-outline-success update-cart">Add to Cart</a>
+			    <h4 style="display: inline; float: right;">रू{{product.price|floatformat:2}}</h4>
+			  </div>
+			</div>
+		</div>
+		{% endfor %}
+		
+	</div>
+-->
+
+	<!-- Trending products (grid)-->
+      <section class="container pt-5 mt-5 mt-md-0 pt-md-6 pt-lg-7">
+        <h2 class="text-center mb-5">Trending products</h2>
+        <div class="row pb-1">
+          {% for product in products %}
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card card-product card-hover"><a class="card-img-top"><img src="{{product.imageURL}}" alt="Product thumbnail"></a>
+              <div class="card-body"><a class="meta-link fs-xs mb-1" >{{product.category}}</a>
+                <h3 class="fs-md fw-medium mb-2"><a class="meta-link" >{{product.name}}</a></h3><span class="text-heading fw-semibold">रू {{product.price|floatformat:2}}</span>
+              </div>
+              <div class="card-footer">
+                <div class="star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star"></i><i class="sr-star ai-star"></i>
+                </div>
+                <div class="d-flex align-items-center">
+                	<a data-product={{product.id}} data-action="add" 
+                		class="btn-addtocart update-cart" href="#">
+                		<i class="ai-shopping-cart"></i><span class="btn-tooltip">To Cart</span>
+                	</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+    <!-- Brands-->
+      <section class="container pt-5 mt-3 mt-md-0 pt-md-6 pt-lg-7 pb-md-4">
+        <h2 class="mb-5 text-center">Shop by brand</h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/01_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/01_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/02_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/02_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/03_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/03_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/04_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/04_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/05_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/05_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/06_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/06_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/07_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/07_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/08_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/08_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/09_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/09_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/10_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/10_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/11_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/11_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="{% static 'images/brands/12_color.png' %}" alt="Brand logo" width="150"><img class="swap-from" src="{% static 'images/brands/12_gray.png' %}" alt="Brand logo" width="150"></div>
+              </div></a></div>
+        </div>
+      </section>
+
+{% endblock content %}
+
+
